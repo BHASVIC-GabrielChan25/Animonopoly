@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Spaces extends Board
+public class Spaces extends Actor
 {
     protected int number = 100;
     protected String name;
@@ -15,7 +15,7 @@ public class Spaces extends Board
     {
         this.number = Pnumber;
         this.name = Pname;
-        background = new GreenfootImage (125,600);
+        background = new GreenfootImage (126,101);
         background.setColor(Color.BLACK);
         background.drawRect(xCord,yCord,125,100);
         background.drawRect(xCord,yCord,125,25);
@@ -26,6 +26,11 @@ public class Spaces extends Board
 
         
         setImage(background);
+    }
+    protected Player detectPlayer()
+    {
+        Actor player = getOneIntersectingObject(Player.class);
+        return null;
     }
     /**
      * Act - do whatever the Spaces wants to do. This method is called whenever

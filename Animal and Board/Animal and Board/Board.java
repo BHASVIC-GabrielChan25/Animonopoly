@@ -17,7 +17,7 @@ public class Board extends Actor
     public Board()
     {
     
-        background = new GreenfootImage (1000,700);
+        background = new GreenfootImage (1001,701);
         background.setColor(Color.WHITE);
         background.fillRect(0,0,1000,700);
         background.setColor(Color.BLACK);
@@ -25,10 +25,6 @@ public class Board extends Actor
         setImage(background);
     }
     
-    protected Player detectPlayer()
-    {
-        Actor player = getOneIntersectingObject(Player.class);
-        return null;
-    }
+
 
 }
