@@ -31,6 +31,8 @@ public class MyWorld extends World
         addObject(start,163,100);
         Skip skip = new Skip();
         addObject(skip, 1037,700);
+        Animal cat = new Animal(1,"Cat",0,0,200);
+        addObject(cat,299,100);
 
     }
 }

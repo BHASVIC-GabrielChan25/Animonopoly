@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Player2 here.
+ * Write a description of class Player4 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Player2 extends Player
+public class Player4 extends Player
 {
-    public Player2()
+        public Player4()
     {
-        super(2);
+        super(4);
     }
     /**
-     * Act - do whatever the Player2 wants to do. This method is called whenever
+     * Act - do whatever the Player4 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()

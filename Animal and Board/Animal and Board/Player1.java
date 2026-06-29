@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player1 extends Player
 {
+    public Player1()
+    {
+        super(1);
+    }
     /**
      * Act - do whatever the Player1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -16,4 +20,13 @@ public class Player1 extends Player
     {
         // Add your action code here.
     }
+    public int getMoney()
+    {
+        return money;
+    }
+    public void setMoney(int change)
+    {
+        this.money = change;
+    }
+
 }

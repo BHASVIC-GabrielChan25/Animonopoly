@@ -14,9 +14,9 @@ public class Animal extends Spaces
     int levelFourStop;
     int cost;
     Player ownedby;
-    public Animal (int Pspace, String Pname,int xCord,int yCord)
+    public Animal (int Pspace, String Pname,int xCord,int yCord,int Pcost)
     {
-        super(Pspace, Pname,xCord, yCord);                    
+        super(Pspace, Pname,xCord, yCord, Pcost);                    
     }
     /**
      * Act - do whatever the Animal wants to do. This method is called whenever
@@ -26,4 +26,8 @@ public class Animal extends Spaces
     {
         // Add your action code here.
     }
+    public void whenLanded()
+     {
+     
+     }
 }
