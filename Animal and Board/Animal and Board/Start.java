@@ -11,6 +11,8 @@ public class Start extends Spaces
     public Start ()
     {
         super(0,"Start", 0 ,0);
+        background.drawString(name,50,100);
+        
     }
     /**
      * Act - do whatever the Start wants to do. This method is called whenever
