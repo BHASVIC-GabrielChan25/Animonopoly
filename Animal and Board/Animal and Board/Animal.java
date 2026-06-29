@@ -13,10 +13,15 @@ public class Animal extends Spaces
     int levelThreeStop;
     int levelFourStop;
     int cost;
-    Player ownedby;
+    Player ownedBy;
     public Animal (int Pspace, String Pname,int Pcost)
     {
-        super(Pspace, Pname, Pcost);                    
+        super(Pspace, Pname, Pcost);  
+        this.levelOneStop = cost / 10;
+        this.levelTwoStop = cost / 4;
+        this.levelThreeStop = cost;
+        this.levelFourStop = cost * 2;
+        this.ownedBy = null;
     }
     /**
      * Act - do whatever the Animal wants to do. This method is called whenever

@@ -37,7 +37,7 @@ public abstract class Spaces extends Actor
         }
         else
         {
-            background.drawString(intToString(cost), 50,90);
+            background.drawString("£"+intToString(cost), 50,90);
         }
         setImage(background);
         
