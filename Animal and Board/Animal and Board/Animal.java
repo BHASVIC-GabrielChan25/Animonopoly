@@ -14,9 +14,9 @@ public class Animal extends Spaces
     int levelFourStop;
     int cost;
     Player ownedby;
-    public Animal (int Pspace, String Pname,int xCord,int yCord,int Pcost)
+    public Animal (int Pspace, String Pname,int Pcost)
     {
-        super(Pspace, Pname,xCord, yCord, Pcost);                    
+        super(Pspace, Pname, Pcost);                    
     }
     /**
      * Act - do whatever the Animal wants to do. This method is called whenever

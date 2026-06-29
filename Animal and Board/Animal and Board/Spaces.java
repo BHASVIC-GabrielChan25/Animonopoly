@@ -16,7 +16,7 @@ public abstract class Spaces extends Actor
     protected Font font= new Font(true, false, 15);
     protected Player[] playerList = {null, null, null, null};
     
-    public Spaces(int Pnumber, String Pname,int xCord,int yCord, int Pcost)
+    public Spaces(int Pnumber, String Pname, int Pcost)
     {
         this.number = Pnumber;
         this.name = Pname;
@@ -24,9 +24,9 @@ public abstract class Spaces extends Actor
         background = new GreenfootImage (126,101);
         background.setColor(Color.BLACK);
         background.setFont(font);
-        background.drawRect(xCord,yCord,125,100);
-        background.drawRect(xCord,yCord,125,25);
-        background.drawRect(xCord,yCord+75,125,25);
+        background.drawRect(0,0,125,100);
+        background.drawRect(0,0,125,25);
+        background.drawRect(0,75,125,25);
         background.drawString(name,45,15);
         background.drawString(intToString(number),5,15);
         

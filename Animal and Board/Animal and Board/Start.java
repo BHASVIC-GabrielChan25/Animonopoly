@@ -11,7 +11,7 @@ public class Start extends Spaces
     Actor player;
     public Start ()
     {
-        super(0,"Start", 0 ,0, 0);
+        super(0,"Start", 0);
             
     }
     /**

@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Spaces
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Spaces\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=Pnumber\ Pname\ xCord\ yCord\ Pcost
-comment1.target=Spaces(int,\ java.lang.String,\ int,\ int,\ int)
+comment1.params=Pnumber\ Pname\ Pcost
+comment1.target=Spaces(int,\ java.lang.String,\ int)
 comment2.params=
 comment2.target=void\ detectPlayer()
 comment3.params=

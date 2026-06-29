@@ -10,7 +10,7 @@ public class Skip extends Spaces
 {
     public Skip()
     {
-        super(13,"Skip", 0, 0, 0);
+        super(13,"Skip", 0);
         setLocation(500, 700);
     }
     /**
