@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class PlayerSelect extends World
 {
     
-    public static int population = 0;
-    Start startButton = new Start("Population: ");
+    
+    public static int start;
+    Start startButton = new Start("Start ");
     
     /**
      * Constructor for objects of class MyWorld.
@@ -26,7 +27,7 @@ public class PlayerSelect extends World
         addObject(new Money3(), 600, 750);
         addObject(new Money4(), 850, 750);
         addObject(startButton, 100, 50);
-        showText("" + , 200, 50);
+        
     }
     /**
      * Prepare the world for the start of the program.
