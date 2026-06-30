@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
+    public static int start;
+    StartButton startButton = new StartButton("Start ");
 
     /**
      * Constructor for objects of class MyWorld.
@@ -17,6 +19,11 @@ public class MyWorld extends World
     {    
         super(1200, 800, 1); 
         prepare();
+        addObject(new Money1(), 100, 770);  
+        addObject(new Money2(), 350, 770);
+        addObject(new Money3(), 600, 770);
+        addObject(new Money4(), 850, 770);
+        addObject(startButton, 70, 50);
     }
     
     /**

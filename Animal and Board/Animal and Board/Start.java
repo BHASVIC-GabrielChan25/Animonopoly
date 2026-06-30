@@ -20,7 +20,8 @@ public class Start extends Spaces
     */
     public void act()
     {
-     }
+        
+    }
 
 
  

@@ -17,6 +17,7 @@ public class Player extends Actor
     {
         this.money = 1500;
         this.playerNumber = PplayerNumber;
+        
     }
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
