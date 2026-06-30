@@ -18,6 +18,12 @@ public class Money3 extends MoneyDisplay
     }
     public void act()
     {
+        update();
         setImage(new GreenfootImage("Money3: " + money, 40, Color.BLACK, new Color(0,0,0,0)));
     }
+    public void update()
+    {
+        money = getWorld().getObjects(Player3.class).get(0).getMoney();
+    }
+
 }

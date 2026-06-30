@@ -12,12 +12,14 @@ public class Player extends Actor
     protected int money;
     protected int playerNumber;
     protected List animalsOwned;
-    protected int timer = 0;
+    protected int timer;
+    protected boolean sameSpace;
+    protected Spaces lastSpace;
     public Player(int PplayerNumber)
     {
         this.money = 1500;
         this.playerNumber = PplayerNumber;
-        
+        this.timer = 0;        
     }
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
@@ -25,13 +27,9 @@ public class Player extends Actor
      */
     public void act()
     {
-        if (Greenfoot.isKeyDown("space") && timer>= 60)
-        {
-            move(10);
-            check();
-            timer = 0;
-        }
-        timer++;
+        
+        check();
+        
     }
     public int getMoney()
     {
@@ -72,6 +70,17 @@ public class Player extends Actor
     
     public void check()
     {
-        System.out.println("Hi");
+        if(checkOnSpace())
+        {
+            Spaces space = getIntersectingSpace();
+            if(space != lastSpace){
+                if (space.getNumber() == 0)
+                {
+                    this.money+= 200;
+                }
+                lastSpace = space;
+            
+            }
+        }
     }
 }

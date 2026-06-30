@@ -18,6 +18,7 @@ public class Money1 extends MoneyDisplay
     }
     public void act()
     {
+        update();
         setImage(new GreenfootImage("Money1: " + money, 40, Color.BLACK, new Color(0,0,0,0)));
     }
     

@@ -19,10 +19,6 @@ public class MyWorld extends World
     {    
         super(1200, 800, 1); 
         prepare();
-        addObject(new Money1(), 100, 770);  
-        addObject(new Money2(), 350, 770);
-        addObject(new Money3(), 600, 770);
-        addObject(new Money4(), 850, 770);
         addObject(startButton, 70, 50);
     }
     
@@ -86,5 +82,6 @@ public class MyWorld extends World
         addObject(tiger, 163,300);
         Animal lion = new Animal (25, "Lion", 600);
         addObject(lion, 163, 200);
+
     }
 }

@@ -13,11 +13,11 @@ public class MoneyDisplay extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    public static int money = 1500;
+    protected int money;
     
     public MoneyDisplay()
     {
-    
+        this.money = 1500;
     }
     
     public void MoneyDepleted()

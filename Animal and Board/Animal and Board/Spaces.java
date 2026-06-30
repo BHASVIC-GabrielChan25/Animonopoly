@@ -87,7 +87,7 @@ public abstract class Spaces extends Actor
     
     public void act()
     {
-        // Add your action code here.
+        detectPlayer();
     }
     protected String intToString(int number)
     {
@@ -103,7 +103,8 @@ public abstract class Spaces extends Actor
     {
         return this;
     }
-    
-    
-
+    public int getNumber()
+    {
+        return this.number;
+    }
 }
