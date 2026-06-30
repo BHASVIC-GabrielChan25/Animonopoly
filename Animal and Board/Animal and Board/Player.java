@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
 /**
  * Write a description of class Player here.
@@ -9,7 +10,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Player extends Actor
 {
     protected int money;
-    public int playerNumber;
+    private int playerNumber;
+    private List animalsOwned;
+    
     public Player(int PplayerNumber)
     {
         this.money = 1500;
@@ -31,5 +34,33 @@ public class Player extends Actor
     {
         this.money = change;
     }
-
+    public int getNumber()
+    {
+        return playerNumber;
+    }
+    public boolean checkOnSpace()
+    {
+        if (getOneIntersectingObject(Spaces.class) != null)
+        {
+            return true;
+        }
+        return false;
+    }
+    
+    public Spaces getIntersectingSpace()
+    {
+        if (getOneIntersectingObject(Spaces.class)!= null){
+            Spaces space = getWorld().getObjectsAt(getX(), getY(),Spaces.class).get(0);
+            return space;
+        }
+        return null;
+        
+    }
+    
+    public Player checkSpaceOwner()
+    {
+        Player player = getIntersectingSpace().getOwner();
+        return player;
+    }
+    
 }

@@ -15,7 +15,7 @@ public abstract class Spaces extends Actor
     protected GreenfootImage background = null;
     protected Font font= new Font(true, false, 15);
     protected Player[] playerList = {null, null, null, null};
-    
+    protected Player owner = null;
     public Spaces(int Pnumber, String Pname, int Pcost)
     {
         this.number = Pnumber;
@@ -95,6 +95,15 @@ public abstract class Spaces extends Actor
         return String.format(string, number);
     }
     
-    protected abstract void whenLanded();
+    protected Player getOwner()
+    {
+        return this.owner;
+    }
+    public Spaces getSpace()
+    {
+        return this;
+    }
+    
+    
 
 }

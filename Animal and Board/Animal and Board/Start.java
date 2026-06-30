@@ -20,12 +20,8 @@ public class Start extends Spaces
     */
     public void act()
     {
-        whenLanded();
      }
-    public void whenLanded()
-    {
-        detectPlayer();
-        
-    }
+
+
  
 }

@@ -21,8 +21,5 @@ public class Skip extends Spaces
     {
         // Add your action code here.
     }
-    public void whenLanded()
- {
-     
- }
+
 }
