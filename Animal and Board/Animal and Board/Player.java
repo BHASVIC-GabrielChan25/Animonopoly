@@ -10,9 +10,9 @@ import java.util.List;
 public class Player extends Actor
 {
     protected int money;
-    private int playerNumber;
-    private List animalsOwned;
-    
+    protected int playerNumber;
+    protected List animalsOwned;
+    protected int timer = 0;
     public Player(int PplayerNumber)
     {
         this.money = 1500;
@@ -24,7 +24,13 @@ public class Player extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        if (Greenfoot.isKeyDown("space") && timer>= 60)
+        {
+            move(10);
+            check();
+            timer = 0;
+        }
+        timer++;
     }
     public int getMoney()
     {
@@ -63,4 +69,8 @@ public class Player extends Actor
         return player;
     }
     
+    public void check()
+    {
+        System.out.println("Hi");
+    }
 }
