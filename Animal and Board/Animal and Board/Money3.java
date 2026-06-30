@@ -20,6 +20,7 @@ public class Money3 extends MoneyDisplay
     {
         update();
         setImage(new GreenfootImage("Money3: " + money, 40, Color.BLACK, new Color(0,0,0,0)));
+        MoneyDepleted();
     }
     public void update()
     {

@@ -19,7 +19,7 @@ public class MyWorld extends World
     {    
         super(1200, 800, 1); 
         prepare();
-        addObject(startButton, 70, 50);
+        addObject(startButton, 30, 15);
     }
     
     /**

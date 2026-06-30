@@ -16,8 +16,12 @@ public class Player2 extends Player
      * Act - do whatever the Player2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
+        public int getMoney()
     {
-        // Add your action code here.
+        return money;
+    }
+    public void setMoney(int change)
+    {
+        this.money = change;
     }
 }

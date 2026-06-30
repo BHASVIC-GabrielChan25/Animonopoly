@@ -21,7 +21,6 @@ public class StartButton extends Actor
     }
     public void act()
     {
-        setImage(new GreenfootImage(name, 30, Color.BLACK, Color.WHITE));
         spawn();
     }
     public void spawn()

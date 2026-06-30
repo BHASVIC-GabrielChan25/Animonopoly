@@ -22,11 +22,13 @@ public class MoneyDisplay extends Actor
     
     public void MoneyDepleted()
     {
-     
+        if (money <= 0)
+        {
+            getWorld().removeObject(this);
+        }
     }
     public void act()
     {
-        MoneyDepleted();
         
     }
 
