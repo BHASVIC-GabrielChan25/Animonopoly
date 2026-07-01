@@ -6,17 +6,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BuyingDisplay extends Actor
+public class PurchaseDisplay extends Actor
 {
     private GreenfootImage background = null;
     protected Font font = new Font(true, false, 50);
     protected boolean button = false;
+    protected int number;
     /**
      * Act - do whatever the buyingDisplay wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    public BuyingDisplay()
+    public PurchaseDisplay(int playerNumber)
     {
         background = new GreenfootImage(1002,602);
         background.setFont(font);
@@ -26,14 +27,22 @@ public class BuyingDisplay extends Actor
         background.fillRect(1,1,998,598);
         background.setColor(Color.BLACK);
         background.drawString("Would you like to purchase this animal?", 30,50);
+        background.drawString("YES", 150,300);
+        background.drawString("NO", 760,300);
         setImage(background);
+        this.number = playerNumber;
     }
     public void act()
     {
         if(!button)
         {
-            getWorld().addObject(new YesButton(),600,400);
+            getWorld().addObject(new YesButton(),300,500);
+            getWorld().addObject(new NoButton(),900, 500);
             button = true;
         }
+    }
+    public int getNumber()
+    {
+        return number;
     }
 }

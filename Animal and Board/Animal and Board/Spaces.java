@@ -94,7 +94,10 @@ public abstract class Spaces extends Actor
         String string = "%,d";
         return String.format(string, number);
     }
-    
+    protected void setOwner(Player player)
+    {
+        this.owner = player;
+    }
     protected Player getOwner()
     {
         return this.owner;
@@ -106,5 +109,9 @@ public abstract class Spaces extends Actor
     public int getNumber()
     {
         return this.number;
+    }
+    public int getCost()
+    {
+        return this.cost;
     }
 }

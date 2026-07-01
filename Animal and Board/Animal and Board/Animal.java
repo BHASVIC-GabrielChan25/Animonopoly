@@ -12,7 +12,6 @@ public class Animal extends Spaces
     private int levelTwoStop;
     private int levelThreeStop;
     private int levelFourStop;
-    private int cost;
     private int level;
     public Animal (int Pspace, String Pname,int Pcost)
     {
@@ -27,10 +26,7 @@ public class Animal extends Spaces
      * Act - do whatever the Animal wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
-    {
-        // Add your action code here.
-    }
+  
     public void setOwner(Player player)
     {
         this.owner = player;

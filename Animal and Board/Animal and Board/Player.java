@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Write a description of class Player here.
@@ -11,7 +12,7 @@ public class Player extends Actor
 {
     protected int money;
     protected int playerNumber;
-    protected List animalsOwned;
+    protected List<Spaces> animalsOwned = new ArrayList<Spaces>();
     protected int timer;
     protected boolean sameSpace;
     protected Spaces lastSpace;
@@ -35,9 +36,9 @@ public class Player extends Actor
     {
         return money;
     }
-    public void setMoney(int change)
+    public void setMoney(int money)
     {
-        this.money = change;
+        this.money = money;
     }
     public int getNumber()
     {
@@ -78,9 +79,51 @@ public class Player extends Actor
                 {
                     this.money+= 200;
                 }
+                if (space.getNumber() != 0 && space.getNumber()!=13)
+                {
+                    if(space.getOwner()== null)
+                    {
+                        getWorld().addObject(new PurchaseDisplay(this.playerNumber),600,400);
+                    }
+                }
                 lastSpace = space;
             
             }
         }
+    }
+    public List getOwned()
+    {
+        return animalsOwned;
+    }
+    public void addOwned(Spaces space)
+    {
+        this.animalsOwned.addFirst(space);
+    }
+    public void moveSpace(int moves)
+    {
+        Spaces currSpace = getIntersectingSpace();
+        int number;
+        if (currSpace!=null){
+            number = currSpace.getNumber();
+        }
+        else{
+            number = 0;
+        }
+        int newNumber = number+ moves;
+        Spaces newSpace = searchSpace(newNumber);
+        setLocation(newSpace.getX(), newSpace.getY()-30);
+    }
+    public Spaces searchSpace(int number)
+    {
+        List<Spaces> allSpaces = getWorld().getObjects(Spaces.class);
+        
+        for (int i =0; i < 26 ; i++)
+        {
+            if(allSpaces.get(i).getNumber() == number)
+            {
+                 return allSpaces.get(i);
+            }
+        }
+        return null;
     }
 }

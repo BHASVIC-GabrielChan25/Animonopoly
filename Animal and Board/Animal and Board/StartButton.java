@@ -39,6 +39,12 @@ public class StartButton extends Actor
         getWorld().addObject(new Money2(), 350, 770);
         getWorld().addObject(new Money3(), 600, 770);
         getWorld().addObject(new Money4(), 850, 770);
+        getWorld().addObject(new TurnDisplay(), 1100,15);
+        getWorld().addObject(new PlayerTurnDisplay(), 600,15);
+        
+        Dice dice = new Dice();
+        getWorld().addObject(dice, 600,400);
+
          getWorld().removeObject(this);
      }
     }
