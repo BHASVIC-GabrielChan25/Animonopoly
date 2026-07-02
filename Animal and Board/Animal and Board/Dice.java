@@ -16,10 +16,11 @@ public class Dice extends Actor
     {
         // Add your action code here.
     }
-    public void roll()
+    public int roll()
     {
         int number = Greenfoot.getRandomNumber(6)+1;
         //input buffer/flashing display?
         setImage("Dice"+number+".jpg");
+        return (number);
     }
 }

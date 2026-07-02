@@ -27,10 +27,7 @@ public class Board extends Actor
     
     public void act()
     {
-        if(Greenfoot.isKeyDown("Space"))
-        {
-            getWorld().addObject(new PurchaseDisplay(0),600,400);
-        }
+   
     }
 
 }

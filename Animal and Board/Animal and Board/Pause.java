@@ -1,28 +1,33 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * Write a description of class Pause here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends World
+public class Pause extends World
 {
-    public static int start;
-    StartButton startButton = new StartButton("Start ");
-    World pauseWorld;
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
-    public MyWorld()
-    {    
+    World game = null;
+    Player1 player1 = null;
+    Player2 player2 = null;
+    Player3 player3 = null;
+    Player4 player4 = null;
+    public Pause(World gameWorld, Player1 p1, Player2 p2, Player3 p3, Player4 p4)
+    {
         super(1200, 800, 1); 
         prepare();
-        addObject(startButton, 30, 15);
-        
+        game = gameWorld;
+        player1 = p1;
+        player2 = p2;
+        player3 = p3;
+        player4 = p4;
     }
-    
+    /**
+     * Constructor for objects of class Pause.
+     * 
+     */
+
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -84,6 +89,13 @@ public class MyWorld extends World
         Animal lion = new Animal (25, "Lion", 600);
         addObject(lion, 163, 200);
 
+        addObject(new PauseScreen(), 600,400);
     }
-
+    
+    public void act(){
+        if (Greenfoot.mouseClicked(null))
+        {
+                Greenfoot.setWorld(game);
+        }
+    }
 }

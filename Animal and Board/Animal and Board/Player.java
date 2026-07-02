@@ -29,7 +29,6 @@ public class Player extends Actor
     public void act()
     {
         
-        check();
         
     }
     public int getMoney()
@@ -71,6 +70,7 @@ public class Player extends Actor
     
     public void check()
     {
+        MainSystem mainSystem = getWorld().getObjects(MainSystem.class).get(0);
         if(checkOnSpace())
         {
             Spaces space = getIntersectingSpace();
@@ -101,17 +101,26 @@ public class Player extends Actor
     }
     public void moveSpace(int moves)
     {
+        MainSystem mainSystem = getWorld().getObjects(MainSystem.class).get(0);
         Spaces currSpace = getIntersectingSpace();
         int number;
+        int newNumber;
         if (currSpace!=null){
             number = currSpace.getNumber();
         }
         else{
             number = 0;
         }
-        int newNumber = number+ moves;
+        newNumber = number+ moves;
+        if(newNumber> 25)
+        {
+            newNumber = number+moves - 25;
+        }
         Spaces newSpace = searchSpace(newNumber);
         setLocation(newSpace.getX(), newSpace.getY()-30);
+        mainSystem.pause();
+        check();
+        
     }
     public Spaces searchSpace(int number)
     {
